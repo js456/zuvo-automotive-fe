@@ -30,11 +30,7 @@ const [deliveryDate, setDeliveryDate] = useState("");
   const [jobStatus, setJobStatus] = useState("");
 
   const availableServices: Service[] = [
-    { id: 1, name: "Oil Change", description: "", price: 500 },
-    { id: 2, name: "Brake Inspection", description: "", price: 300 },
-    { id: 3, name: "Car Wash", description: "", price: 200 },
-    { id: 4, name: "Engine Tune-up", description: "", price: 1200 },
-    { id: 5, name: "Wheel Alignment", description: "", price: 800 },
+
   ];
 
   const toggleService = (service: Service) => {

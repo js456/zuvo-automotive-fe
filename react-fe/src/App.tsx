@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import JobsPage from "./pages/Jobs";
 import Jobcard from "./pages/Jobcard"; // ✅ Import Jobcard component
 import Layout from "./components/Layout";
+import ProfilePage from "./pages/profile";
 
 export default function App() {
   return (
@@ -50,11 +51,19 @@ export default function App() {
           </Layout>
         }
       />
-      <Route
+      {/* <Route
         path="/jobcard"
         element={
           <Layout>
             <Jobcard />
+          </Layout>
+        }
+      />*/}
+      <Route 
+        path="/profile"
+        element={
+          <Layout>
+            <ProfilePage />
           </Layout>
         }
       />

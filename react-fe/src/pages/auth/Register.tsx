@@ -7,10 +7,13 @@ export default function Register() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState<User>({
-    name: "",
-    email: "",
-    phone: "",
-    password_hash: "",
+  id: 0,
+  name: "",
+  email: "",
+  phone: "",
+  passwordHash: "",      // match API field name exactly
+  role: "",
+  tenantId: 0
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +24,7 @@ export default function Register() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { name: userName, email, phone: contactNumber, password_hash: password } = user;
+    const { name: userName, email, phone: contactNumber, passwordHash: password } = user;
 
     if (!userName || !email || !contactNumber || !password) {
       alert("Please fill in all fields");
@@ -75,10 +78,10 @@ export default function Register() {
 
         <input
           type="password"
-          name="password_hash"
+          name="passwordHash"
           placeholder="Password"
           className="w-full mb-3 p-2 border rounded"
-          value={user.password_hash}
+          value={user.passwordHash}
           onChange={handleChange}
         />
 
@@ -90,10 +93,10 @@ export default function Register() {
         </button>
 
         <Link
-          to="/"
+          to="/login"
           className="block text-center text-sm text-blue-600 hover:underline"
         >
-          ⬅ Back to Home
+          ⬅ Back to Login
         </Link>
       </form>
     </div>

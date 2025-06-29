@@ -1,6 +1,9 @@
-export interface User{
-    name: string,
-    email: string,
-    phone: string,
-    password_hash: string
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  passwordHash?: string ;
+  role?: string;
+  tenantId?: number;
 }

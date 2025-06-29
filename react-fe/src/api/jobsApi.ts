@@ -20,9 +20,7 @@ const fallbackJobs: JobCard[] = [
     deliveryDate: "2025-07-01T00:00:00.000Z",
     serviceid: [1, 3, 5],
     service: [
-      { id: 1, name: "Oil Change", description: "Includes engine oil and filter replacement", price: 500 },
-      { id: 3, name: "Car Wash", description: "Interior and exterior cleaning", price: 200 },
-      { id: 5, name: "Wheel Alignment", description: "Align all four wheels", price: 800 },
+
     ],
     comments: "Customer requested to check brake pads as well.",
     jobStatus: "Pending"
@@ -44,8 +42,7 @@ const fallbackJobs: JobCard[] = [
     deliveryDate: "2025-07-05T00:00:00.000Z",
     serviceid: [2, 4],
     service: [
-      { id: 2, name: "Brake Inspection", description: "Complete brake system check", price: 300 },
-      { id: 4, name: "Engine Tune-up", description: "Engine performance tuning and diagnostics", price: 1200 },
+
     ],
     comments: "Check engine light was blinking intermittently.",
     jobStatus: "Pending"

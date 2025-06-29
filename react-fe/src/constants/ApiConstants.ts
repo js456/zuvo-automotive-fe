@@ -1,15 +1,19 @@
-export const API_BASE_URL = "http://127.0.0.1:9080";
+export const API_BASE_URL = "http://127.0.0.1:9050/api";
 
 export const USER_API = {
-  REGISTER: `${API_BASE_URL}/user/createUser`,
-  LOGIN: `${API_BASE_URL}/users/login`,
-  PROFILE: `${API_BASE_URL}/users/profile`,
-  // Add more user endpoints here
+  REGISTER: `/auth/register`,
+  LOGIN: `/auth/login`,
+  PROFILE: `/user`,
 };
 
-// You can organize other domain endpoints similarly:
 export const JOB_API = {
-  CREATE: `${API_BASE_URL}/jobs/create`,
-  LIST: `${API_BASE_URL}/jobs`,
-  DELETE: (id: number) => `${API_BASE_URL}/jobs/${id}`,
+  CREATE: `/jobs/create`,
+  LIST: `/jobs`,
+  DELETE: (id: number) => `/jobs/${id}`,
+};
+
+export const SERVICE_API = {
+  CREATE: `/services`,
+  LIST: `/services`,
+  DELETE: (id: number) => `/jobs/${id}`,
 };
